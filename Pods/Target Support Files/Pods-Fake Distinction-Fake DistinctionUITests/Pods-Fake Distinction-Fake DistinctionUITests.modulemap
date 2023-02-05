@@ -1,0 +1,6 @@
+framework module Pods_Fake_Distinction_Fake_DistinctionUITests {
+  umbrella header "Pods-Fake Distinction-Fake DistinctionUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

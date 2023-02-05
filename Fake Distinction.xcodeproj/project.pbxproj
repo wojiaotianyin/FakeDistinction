@@ -1,0 +1,815 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		40AAAA379F7C45A39F7A9A12 /* Pods_Fake_Distinction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20549FFCF7E1DE90E3A9A5C4 /* Pods_Fake_Distinction.framework */; };
+		E133E8C52984F5C60025C9B5 /* Fake_DistinctionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E133E8C42984F5C60025C9B5 /* Fake_DistinctionApp.swift */; };
+		E133E8C72984F5C60025C9B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E133E8C62984F5C60025C9B5 /* ContentView.swift */; };
+		E133E8C92984F5C70025C9B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E133E8C82984F5C70025C9B5 /* Assets.xcassets */; };
+		E133E8CD2984F5C70025C9B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E133E8CC2984F5C70025C9B5 /* Preview Assets.xcassets */; };
+		E133E8D72984F5C80025C9B5 /* Fake_DistinctionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E133E8D62984F5C80025C9B5 /* Fake_DistinctionTests.swift */; };
+		E133E8E12984F5C80025C9B5 /* Fake_DistinctionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E133E8E02984F5C80025C9B5 /* Fake_DistinctionUITests.swift */; };
+		E133E8E32984F5C80025C9B5 /* Fake_DistinctionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E133E8E22984F5C80025C9B5 /* Fake_DistinctionUITestsLaunchTests.swift */; };
+		E133E8F1298513250025C9B5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E133E8F0298513250025C9B5 /* Constants.swift */; };
+		E133E8F3298516D80025C9B5 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E133E8F2298516D80025C9B5 /* ViewModel.swift */; };
+		E133E8F829852E000025C9B5 /* DistinctionDataObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = E133E8F729852E000025C9B5 /* DistinctionDataObj.swift */; };
+		E133E8FA298531850025C9B5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E133E8F9298531850025C9B5 /* Launch Screen.storyboard */; };
+		E133E8FF2985354C0025C9B5 /* distinction_all.csv in Resources */ = {isa = PBXBuildFile; fileRef = E133E8FE2985354C0025C9B5 /* distinction_all.csv */; };
+		E151DA0529861D2800A6EC5C /* distinction_all.json in Resources */ = {isa = PBXBuildFile; fileRef = E151DA0429861D2800A6EC5C /* distinction_all.json */; };
+		F104E83A48BC78CF03741BDB /* Pods_Fake_Distinction_Fake_DistinctionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6F05EFEAF286FFC7909E334 /* Pods_Fake_Distinction_Fake_DistinctionUITests.framework */; };
+		F215936B02A682B8BE91BC54 /* Pods_Fake_DistinctionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D955A1DED3A85D493F90B14F /* Pods_Fake_DistinctionTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E133E8D32984F5C80025C9B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E133E8B92984F5C60025C9B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E133E8C02984F5C60025C9B5;
+			remoteInfo = "Fake Distinction";
+		};
+		E133E8DD2984F5C80025C9B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E133E8B92984F5C60025C9B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E133E8C02984F5C60025C9B5;
+			remoteInfo = "Fake Distinction";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		13C89838CA2AE5A6521D668D /* Pods-Fake Distinction-Fake DistinctionUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fake Distinction-Fake DistinctionUITests.debug.xcconfig"; path = "Target Support Files/Pods-Fake Distinction-Fake DistinctionUITests/Pods-Fake Distinction-Fake DistinctionUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		20549FFCF7E1DE90E3A9A5C4 /* Pods_Fake_Distinction.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fake_Distinction.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45C5ED82C7C145B77A3A2C18 /* Pods-Fake Distinction.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fake Distinction.release.xcconfig"; path = "Target Support Files/Pods-Fake Distinction/Pods-Fake Distinction.release.xcconfig"; sourceTree = "<group>"; };
+		53E5DF62DFB583629E833391 /* Pods-Fake DistinctionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fake DistinctionTests.release.xcconfig"; path = "Target Support Files/Pods-Fake DistinctionTests/Pods-Fake DistinctionTests.release.xcconfig"; sourceTree = "<group>"; };
+		A6F05EFEAF286FFC7909E334 /* Pods_Fake_Distinction_Fake_DistinctionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fake_Distinction_Fake_DistinctionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D955A1DED3A85D493F90B14F /* Pods_Fake_DistinctionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fake_DistinctionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E110CB05AB29ECEB7B616F56 /* Pods-Fake Distinction.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fake Distinction.debug.xcconfig"; path = "Target Support Files/Pods-Fake Distinction/Pods-Fake Distinction.debug.xcconfig"; sourceTree = "<group>"; };
+		E133E8C12984F5C60025C9B5 /* Fake Distinction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fake Distinction.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E133E8C42984F5C60025C9B5 /* Fake_DistinctionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fake_DistinctionApp.swift; sourceTree = "<group>"; };
+		E133E8C62984F5C60025C9B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E133E8C82984F5C70025C9B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E133E8CA2984F5C70025C9B5 /* Fake_Distinction.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Fake_Distinction.entitlements; sourceTree = "<group>"; };
+		E133E8CC2984F5C70025C9B5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E133E8D22984F5C80025C9B5 /* Fake DistinctionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fake DistinctionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E133E8D62984F5C80025C9B5 /* Fake_DistinctionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fake_DistinctionTests.swift; sourceTree = "<group>"; };
+		E133E8DC2984F5C80025C9B5 /* Fake DistinctionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fake DistinctionUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E133E8E02984F5C80025C9B5 /* Fake_DistinctionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fake_DistinctionUITests.swift; sourceTree = "<group>"; };
+		E133E8E22984F5C80025C9B5 /* Fake_DistinctionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fake_DistinctionUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E133E8EF298505CD0025C9B5 /* Fake-Distinction-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Fake-Distinction-Info.plist"; sourceTree = SOURCE_ROOT; };
+		E133E8F0298513250025C9B5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E133E8F2298516D80025C9B5 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		E133E8F729852E000025C9B5 /* DistinctionDataObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistinctionDataObj.swift; sourceTree = "<group>"; };
+		E133E8F9298531850025C9B5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		E133E8FE2985354C0025C9B5 /* distinction_all.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = distinction_all.csv; sourceTree = "<group>"; };
+		E151DA0429861D2800A6EC5C /* distinction_all.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = distinction_all.json; sourceTree = "<group>"; };
+		EFEBE814C3C31E3AC60B91B2 /* Pods-Fake DistinctionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fake DistinctionTests.debug.xcconfig"; path = "Target Support Files/Pods-Fake DistinctionTests/Pods-Fake DistinctionTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FBCD17766ED110CFDB3B7C45 /* Pods-Fake Distinction-Fake DistinctionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fake Distinction-Fake DistinctionUITests.release.xcconfig"; path = "Target Support Files/Pods-Fake Distinction-Fake DistinctionUITests/Pods-Fake Distinction-Fake DistinctionUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E133E8BE2984F5C60025C9B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40AAAA379F7C45A39F7A9A12 /* Pods_Fake_Distinction.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E133E8CF2984F5C80025C9B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F215936B02A682B8BE91BC54 /* Pods_Fake_DistinctionTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E133E8D92984F5C80025C9B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F104E83A48BC78CF03741BDB /* Pods_Fake_Distinction_Fake_DistinctionUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		24279D98FBC41E69D36B782E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20549FFCF7E1DE90E3A9A5C4 /* Pods_Fake_Distinction.framework */,
+				A6F05EFEAF286FFC7909E334 /* Pods_Fake_Distinction_Fake_DistinctionUITests.framework */,
+				D955A1DED3A85D493F90B14F /* Pods_Fake_DistinctionTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		874C8248302162518625F89F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E110CB05AB29ECEB7B616F56 /* Pods-Fake Distinction.debug.xcconfig */,
+				45C5ED82C7C145B77A3A2C18 /* Pods-Fake Distinction.release.xcconfig */,
+				13C89838CA2AE5A6521D668D /* Pods-Fake Distinction-Fake DistinctionUITests.debug.xcconfig */,
+				FBCD17766ED110CFDB3B7C45 /* Pods-Fake Distinction-Fake DistinctionUITests.release.xcconfig */,
+				EFEBE814C3C31E3AC60B91B2 /* Pods-Fake DistinctionTests.debug.xcconfig */,
+				53E5DF62DFB583629E833391 /* Pods-Fake DistinctionTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E133E8B82984F5C60025C9B5 = {
+			isa = PBXGroup;
+			children = (
+				E133E8C32984F5C60025C9B5 /* Fake Distinction */,
+				E133E8D52984F5C80025C9B5 /* Fake DistinctionTests */,
+				E133E8DF2984F5C80025C9B5 /* Fake DistinctionUITests */,
+				E133E8C22984F5C60025C9B5 /* Products */,
+				874C8248302162518625F89F /* Pods */,
+				24279D98FBC41E69D36B782E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E133E8C22984F5C60025C9B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E133E8C12984F5C60025C9B5 /* Fake Distinction.app */,
+				E133E8D22984F5C80025C9B5 /* Fake DistinctionTests.xctest */,
+				E133E8DC2984F5C80025C9B5 /* Fake DistinctionUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E133E8C32984F5C60025C9B5 /* Fake Distinction */ = {
+			isa = PBXGroup;
+			children = (
+				E13869CF298B6BC400339178 /* ViewModel */,
+				E133E8F4298527180025C9B5 /* CsvData */,
+				E133E8EF298505CD0025C9B5 /* Fake-Distinction-Info.plist */,
+				E133E8C42984F5C60025C9B5 /* Fake_DistinctionApp.swift */,
+				E133E8C62984F5C60025C9B5 /* ContentView.swift */,
+				E133E8C82984F5C70025C9B5 /* Assets.xcassets */,
+				E133E8CA2984F5C70025C9B5 /* Fake_Distinction.entitlements */,
+				E133E8CB2984F5C70025C9B5 /* Preview Content */,
+				E133E8F0298513250025C9B5 /* Constants.swift */,
+				E133E8F729852E000025C9B5 /* DistinctionDataObj.swift */,
+				E133E8F9298531850025C9B5 /* Launch Screen.storyboard */,
+			);
+			path = "Fake Distinction";
+			sourceTree = "<group>";
+		};
+		E133E8CB2984F5C70025C9B5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E133E8CC2984F5C70025C9B5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E133E8D52984F5C80025C9B5 /* Fake DistinctionTests */ = {
+			isa = PBXGroup;
+			children = (
+				E133E8D62984F5C80025C9B5 /* Fake_DistinctionTests.swift */,
+			);
+			path = "Fake DistinctionTests";
+			sourceTree = "<group>";
+		};
+		E133E8DF2984F5C80025C9B5 /* Fake DistinctionUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E133E8E02984F5C80025C9B5 /* Fake_DistinctionUITests.swift */,
+				E133E8E22984F5C80025C9B5 /* Fake_DistinctionUITestsLaunchTests.swift */,
+			);
+			path = "Fake DistinctionUITests";
+			sourceTree = "<group>";
+		};
+		E133E8F4298527180025C9B5 /* CsvData */ = {
+			isa = PBXGroup;
+			children = (
+				E133E8FE2985354C0025C9B5 /* distinction_all.csv */,
+				E151DA0429861D2800A6EC5C /* distinction_all.json */,
+			);
+			path = CsvData;
+			sourceTree = "<group>";
+		};
+		E13869CF298B6BC400339178 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E133E8F2298516D80025C9B5 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E133E8C02984F5C60025C9B5 /* Fake Distinction */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E133E8E62984F5C80025C9B5 /* Build configuration list for PBXNativeTarget "Fake Distinction" */;
+			buildPhases = (
+				BE38C8D976D05667C6C96603 /* [CP] Check Pods Manifest.lock */,
+				E133E8BD2984F5C60025C9B5 /* Sources */,
+				E133E8BE2984F5C60025C9B5 /* Frameworks */,
+				E133E8BF2984F5C60025C9B5 /* Resources */,
+				24A184DAEE40279FEF1CD7BA /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Fake Distinction";
+			productName = "Fake Distinction";
+			productReference = E133E8C12984F5C60025C9B5 /* Fake Distinction.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E133E8D12984F5C80025C9B5 /* Fake DistinctionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E133E8E92984F5C80025C9B5 /* Build configuration list for PBXNativeTarget "Fake DistinctionTests" */;
+			buildPhases = (
+				58F083CB59D48E2D8225C807 /* [CP] Check Pods Manifest.lock */,
+				E133E8CE2984F5C80025C9B5 /* Sources */,
+				E133E8CF2984F5C80025C9B5 /* Frameworks */,
+				E133E8D02984F5C80025C9B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E133E8D42984F5C80025C9B5 /* PBXTargetDependency */,
+			);
+			name = "Fake DistinctionTests";
+			productName = "Fake DistinctionTests";
+			productReference = E133E8D22984F5C80025C9B5 /* Fake DistinctionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E133E8DB2984F5C80025C9B5 /* Fake DistinctionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E133E8EC2984F5C80025C9B5 /* Build configuration list for PBXNativeTarget "Fake DistinctionUITests" */;
+			buildPhases = (
+				128D04DD1E1612BFAF20758F /* [CP] Check Pods Manifest.lock */,
+				E133E8D82984F5C80025C9B5 /* Sources */,
+				E133E8D92984F5C80025C9B5 /* Frameworks */,
+				E133E8DA2984F5C80025C9B5 /* Resources */,
+				A0087597B13060BCA73FB656 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E133E8DE2984F5C80025C9B5 /* PBXTargetDependency */,
+			);
+			name = "Fake DistinctionUITests";
+			productName = "Fake DistinctionUITests";
+			productReference = E133E8DC2984F5C80025C9B5 /* Fake DistinctionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E133E8B92984F5C60025C9B5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					E133E8C02984F5C60025C9B5 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					E133E8D12984F5C80025C9B5 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = E133E8C02984F5C60025C9B5;
+					};
+					E133E8DB2984F5C80025C9B5 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = E133E8C02984F5C60025C9B5;
+					};
+				};
+			};
+			buildConfigurationList = E133E8BC2984F5C60025C9B5 /* Build configuration list for PBXProject "Fake Distinction" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E133E8B82984F5C60025C9B5;
+			productRefGroup = E133E8C22984F5C60025C9B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E133E8C02984F5C60025C9B5 /* Fake Distinction */,
+				E133E8D12984F5C80025C9B5 /* Fake DistinctionTests */,
+				E133E8DB2984F5C80025C9B5 /* Fake DistinctionUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E133E8BF2984F5C60025C9B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E133E8CD2984F5C70025C9B5 /* Preview Assets.xcassets in Resources */,
+				E133E8FA298531850025C9B5 /* Launch Screen.storyboard in Resources */,
+				E133E8C92984F5C70025C9B5 /* Assets.xcassets in Resources */,
+				E133E8FF2985354C0025C9B5 /* distinction_all.csv in Resources */,
+				E151DA0529861D2800A6EC5C /* distinction_all.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E133E8D02984F5C80025C9B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E133E8DA2984F5C80025C9B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		128D04DD1E1612BFAF20758F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Fake Distinction-Fake DistinctionUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		24A184DAEE40279FEF1CD7BA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fake Distinction/Pods-Fake Distinction-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fake Distinction/Pods-Fake Distinction-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Fake Distinction/Pods-Fake Distinction-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58F083CB59D48E2D8225C807 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Fake DistinctionTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0087597B13060BCA73FB656 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fake Distinction-Fake DistinctionUITests/Pods-Fake Distinction-Fake DistinctionUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fake Distinction-Fake DistinctionUITests/Pods-Fake Distinction-Fake DistinctionUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Fake Distinction-Fake DistinctionUITests/Pods-Fake Distinction-Fake DistinctionUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE38C8D976D05667C6C96603 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Fake Distinction-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E133E8BD2984F5C60025C9B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E133E8C72984F5C60025C9B5 /* ContentView.swift in Sources */,
+				E133E8F1298513250025C9B5 /* Constants.swift in Sources */,
+				E133E8F3298516D80025C9B5 /* ViewModel.swift in Sources */,
+				E133E8C52984F5C60025C9B5 /* Fake_DistinctionApp.swift in Sources */,
+				E133E8F829852E000025C9B5 /* DistinctionDataObj.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E133E8CE2984F5C80025C9B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E133E8D72984F5C80025C9B5 /* Fake_DistinctionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E133E8D82984F5C80025C9B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E133E8E32984F5C80025C9B5 /* Fake_DistinctionUITestsLaunchTests.swift in Sources */,
+				E133E8E12984F5C80025C9B5 /* Fake_DistinctionUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E133E8D42984F5C80025C9B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E133E8C02984F5C60025C9B5 /* Fake Distinction */;
+			targetProxy = E133E8D32984F5C80025C9B5 /* PBXContainerItemProxy */;
+		};
+		E133E8DE2984F5C80025C9B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E133E8C02984F5C60025C9B5 /* Fake Distinction */;
+			targetProxy = E133E8DD2984F5C80025C9B5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E133E8E42984F5C80025C9B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E133E8E52984F5C80025C9B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		E133E8E72984F5C80025C9B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E110CB05AB29ECEB7B616F56 /* Pods-Fake Distinction.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Fake Distinction/Fake_Distinction.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Fake Distinction/Preview Content\"";
+				DEVELOPMENT_TEAM = 42BQ725P56;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Fake-Distinction-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Fake Distinction";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "amane.Fake-Distinction";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E133E8E82984F5C80025C9B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45C5ED82C7C145B77A3A2C18 /* Pods-Fake Distinction.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Fake Distinction/Fake_Distinction.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Fake Distinction/Preview Content\"";
+				DEVELOPMENT_TEAM = 42BQ725P56;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Fake-Distinction-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Fake Distinction";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "amane.Fake-Distinction";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E133E8EA2984F5C80025C9B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFEBE814C3C31E3AC60B91B2 /* Pods-Fake DistinctionTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 42BQ725P56;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "amane.Fake-DistinctionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fake Distinction.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Fake Distinction";
+			};
+			name = Debug;
+		};
+		E133E8EB2984F5C80025C9B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53E5DF62DFB583629E833391 /* Pods-Fake DistinctionTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 42BQ725P56;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "amane.Fake-DistinctionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fake Distinction.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Fake Distinction";
+			};
+			name = Release;
+		};
+		E133E8ED2984F5C80025C9B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13C89838CA2AE5A6521D668D /* Pods-Fake Distinction-Fake DistinctionUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 42BQ725P56;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "amane.Fake-DistinctionUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Fake Distinction";
+			};
+			name = Debug;
+		};
+		E133E8EE2984F5C80025C9B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBCD17766ED110CFDB3B7C45 /* Pods-Fake Distinction-Fake DistinctionUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 42BQ725P56;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "amane.Fake-DistinctionUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Fake Distinction";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E133E8BC2984F5C60025C9B5 /* Build configuration list for PBXProject "Fake Distinction" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E133E8E42984F5C80025C9B5 /* Debug */,
+				E133E8E52984F5C80025C9B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E133E8E62984F5C80025C9B5 /* Build configuration list for PBXNativeTarget "Fake Distinction" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E133E8E72984F5C80025C9B5 /* Debug */,
+				E133E8E82984F5C80025C9B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E133E8E92984F5C80025C9B5 /* Build configuration list for PBXNativeTarget "Fake DistinctionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E133E8EA2984F5C80025C9B5 /* Debug */,
+				E133E8EB2984F5C80025C9B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E133E8EC2984F5C80025C9B5 /* Build configuration list for PBXNativeTarget "Fake DistinctionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E133E8ED2984F5C80025C9B5 /* Debug */,
+				E133E8EE2984F5C80025C9B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E133E8B92984F5C60025C9B5 /* Project object */;
+}

@@ -1,0 +1,20 @@
+PODS:
+  - CSV.swift (2.4.3)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - CSV.swift (~> 2.4.3)
+  - SVProgressHUD
+
+SPEC REPOS:
+  trunk:
+    - CSV.swift
+    - SVProgressHUD
+
+SPEC CHECKSUMS:
+  CSV.swift: d38741b349c067b4a6db42237cb0e2974d21ccac
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: d8eeb2d024a617701cfc0268b8052bd502aaeb1d
+
+COCOAPODS: 1.11.3
