@@ -21,6 +21,7 @@
 		E133E8FA298531850025C9B5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E133E8F9298531850025C9B5 /* Launch Screen.storyboard */; };
 		E133E8FF2985354C0025C9B5 /* distinction_all.csv in Resources */ = {isa = PBXBuildFile; fileRef = E133E8FE2985354C0025C9B5 /* distinction_all.csv */; };
 		E151DA0529861D2800A6EC5C /* distinction_all.json in Resources */ = {isa = PBXBuildFile; fileRef = E151DA0429861D2800A6EC5C /* distinction_all.json */; };
+		F0376DB929911E2A00107A53 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0376DB829911E2A00107A53 /* ResultView.swift */; };
 		F104E83A48BC78CF03741BDB /* Pods_Fake_Distinction_Fake_DistinctionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6F05EFEAF286FFC7909E334 /* Pods_Fake_Distinction_Fake_DistinctionUITests.framework */; };
 		F215936B02A682B8BE91BC54 /* Pods_Fake_DistinctionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D955A1DED3A85D493F90B14F /* Pods_Fake_DistinctionTests.framework */; };
 /* End PBXBuildFile section */
@@ -69,6 +70,7 @@
 		E133E8FE2985354C0025C9B5 /* distinction_all.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = distinction_all.csv; sourceTree = "<group>"; };
 		E151DA0429861D2800A6EC5C /* distinction_all.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = distinction_all.json; sourceTree = "<group>"; };
 		EFEBE814C3C31E3AC60B91B2 /* Pods-Fake DistinctionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fake DistinctionTests.debug.xcconfig"; path = "Target Support Files/Pods-Fake DistinctionTests/Pods-Fake DistinctionTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F0376DB829911E2A00107A53 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		FBCD17766ED110CFDB3B7C45 /* Pods-Fake Distinction-Fake DistinctionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fake Distinction-Fake DistinctionUITests.release.xcconfig"; path = "Target Support Files/Pods-Fake Distinction-Fake DistinctionUITests/Pods-Fake Distinction-Fake DistinctionUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,6 +161,7 @@
 				E133E8F0298513250025C9B5 /* Constants.swift */,
 				E133E8F729852E000025C9B5 /* DistinctionDataObj.swift */,
 				E133E8F9298531850025C9B5 /* Launch Screen.storyboard */,
+				F0376DB829911E2A00107A53 /* ResultView.swift */,
 			);
 			path = "Fake Distinction";
 			sourceTree = "<group>";
@@ -451,6 +454,7 @@
 				E133E8F3298516D80025C9B5 /* ViewModel.swift in Sources */,
 				E133E8C52984F5C60025C9B5 /* Fake_DistinctionApp.swift in Sources */,
 				E133E8F829852E000025C9B5 /* DistinctionDataObj.swift in Sources */,
+				F0376DB929911E2A00107A53 /* ResultView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,7 +610,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Fake Distinction/Preview Content\"";
-				DEVELOPMENT_TEAM = 42BQ725P56;
+				DEVELOPMENT_TEAM = H397L4X7N8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -646,7 +650,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Fake Distinction/Preview Content\"";
-				DEVELOPMENT_TEAM = 42BQ725P56;
+				DEVELOPMENT_TEAM = H397L4X7N8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
