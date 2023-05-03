@@ -48,77 +48,76 @@ struct ContentView: View {
             Spacer()
             
             VStack {
-//                ZStack {
-                    Group{
-                        // イディオムカード
-                        VStack(alignment: .center, spacing: 4) {
-                            Text(idiom).font(.system(size: K.Size.idiomTextSize, weight: .black, design: .default))
-                                .padding()
-                            Text(synonym).font(.system(size: K.Size.synonymTextSize, weight: .bold, design: .default))
-                        }.background(RoundedRectangle(cornerRadius: 50)
-                            .fill(Color(cardColor))
-                            .frame(width: 380, height: 300)
-                            .shadow(color:.gray, radius: 2, x:0, y:5)
-                        )
-                        .offset(x: 0, y: -150)
-                        
-                    }
-                    .overlay(Text(idiomExp).font(.system(size: K.Size.expTextSize, weight: .medium, design: .default)).offset(x: 0, y: 100).frame(width: 380, height: 300))
-//                }
-                
-//                Spacer()
+                Group{
+                    // イディオムカード
+                    VStack(alignment: .center, spacing: 4) {
+                        Text(idiom).font(.system(size: K.Size.idiomTextSize, weight: .black, design: .default))
+                            .padding()
+                        Text(synonym).font(.system(size: K.Size.synonymTextSize, weight: .bold, design: .default))
+                            .padding(.horizontal, 70)
+                    }.background(RoundedRectangle(cornerRadius: 50)
+                        .fill(Color(cardColor))
+                        .frame(width: 380, height: 300)
+                        .shadow(color:.gray, radius: 2, x:0, y:5)
+                        .padding(.horizontal, 50)
+                    )
+                    
+                    // イディオムの例文
+                    Text(idiomExp).font(.system(size: K.Size.expTextSize, weight: .medium, design: .default)).frame(width: 380, height: 300)
+                }
+                //                    .overlay()
                 
                 Group {
-                    // チェック・バツボタン
-                    HStack(spacing:80){
-                        Button(action:{
-                            isIncorrect.toggle()
-                            viewModel.incorrectArray.append(generateIdioms())
-                        }) {
-                            Image("cross")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .padding(.all)
-                                .background(RoundedRectangle(cornerRadius: 25)
-                                    .fill(Color(K.Colors.crossBtnColor))
+                    VStack(spacing: 10) {
+                        // チェック・バツボタン
+                        HStack(spacing:80){
+                            Button(action:{
+                                isIncorrect.toggle()
+                                viewModel.incorrectArray.append(generateIdioms())
+                            }) {
+                                Image("cross")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .padding(.all)
+                                    .background(RoundedRectangle(cornerRadius: 25)
+                                        .fill(Color(K.Colors.crossBtnColor))
+                                        .frame(width: 100, height: 100)
+                                        .shadow(color:.gray, radius: 2, x:0, y:5)
+                                    )
                                     .frame(width: 100, height: 100)
-                                    .shadow(color:.gray, radius: 2, x:0, y:5)
-                                )
-                                .frame(width: 100, height: 100)
+                            }
+                            Button(action:{
+                                isCorrect.toggle()
+                                viewModel.memorizedArray.append(generateIdioms())
+                            }){
+                                Image("check-mark")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .padding(.all)
+                                    .background(RoundedRectangle(cornerRadius: 25)
+                                        .fill(Color(K.Colors.checkBtnColor))
+                                        .frame(width: 100, height: 100)
+                                        .shadow(color:.gray, radius: 2, x:0, y:5)
+                                    )
+                                    .frame(width: 100, height: 100)
+                                
+                            }
                         }
+                        
                         Button(action:{
-                            isCorrect.toggle()
-                            viewModel.memorizedArray.append(generateIdioms())
+                            isShowingView.toggle()
                         }){
-                            Image("check-mark")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .padding(.all)
-                                .background(RoundedRectangle(cornerRadius: 25)
-                                    .fill(Color(K.Colors.checkBtnColor))
-                                    .frame(width: 100, height: 100)
-                                    .shadow(color:.gray, radius: 2, x:0, y:5)
-                                )
-                                .frame(width: 100, height: 100)
-                            
+                            ZStack{
+                                K.Colors.blueGradient
+                                Text("Result").fontWeight(.bold).foregroundColor(Color.white).padding()
+                                
+                            }.frame(width: 100, height: 50).cornerRadius(15)
+                        }.background(RoundedRectangle(cornerRadius: 15)).offset(x: 150, y: 0).sheet(isPresented: $isShowingView) {
+                            ResultView(viewModel: viewModel)
                         }
                     }
                 }
-                // Exitボタン
-                .overlay(Button(action:{
-                    isShowingView.toggle()
-                }){
-                    ZStack{
-                        K.Colors.blueGradient
-                        Text("Exit").fontWeight(.bold).foregroundColor(Color.white).padding()
-                        
-                    }.frame(width: 70, height: 50).cornerRadius(15)
-                }.background(RoundedRectangle(cornerRadius: 15)).offset(x: 150, y: 300).sheet(isPresented: $isShowingView) {
-                    ResultView(viewModel: viewModel)
-                })
             }
-            
-            Spacer()
         }
     }
     
