@@ -17,12 +17,48 @@ struct ResultView: View {
         self.incorrectArray = viewModel.incorrectArray
         self.correctArrray = viewModel.memorizedArray
     }
-
+    
     var body: some View {
-        Text("Your result").font(.system(size: K.Size.idiomTextSize, weight: .black, design: .default))
-        Text("You need to learn: \(incorrectArray.count) words")
-        Text("You memorized: \(correctArrray.count) words")
-//        let numsString = incorrectArray.map { String($0) }.joined(separator: ", ")
+        VStack {
+            Text("Your result").font(.system(size: K.Size.idiomTextSize, weight: .black, design: .default))
+                .padding(.top, 50)
+            
+            Spacer()
+            
+            HStack {
+                Text("You need to learn: \(incorrectArray.count) words").font(.system(size: K.Size.expTextSize, weight: .black, design: .default))
+                Button(action: {
+                    //                    isCorrect.toggle()
+                    //                    viewModel.memorizedArray.append(generateIdioms())
+                }){
+                    ZStack{
+                        K.Colors.pinkGradient
+                        Text("Learn").fontWeight(.bold).foregroundColor(Color.white).padding()
+                        
+                    }.frame(width: 100, height: 50).cornerRadius(15)
+                }.background(RoundedRectangle(cornerRadius: 15))
+            }
+            
+            Spacer()
+            
+            HStack {
+                Text("You memorized: \(correctArrray.count) words").font(.system(size: K.Size.expTextSize, weight: .black, design: .default))
+                Button(action: {
+                    //                    isCorrect.toggle()
+                    //                    viewModel.memorizedArray.append(generateIdioms())
+                }){
+                    ZStack{
+                        K.Colors.pinkGradient
+                        Text("Learn").fontWeight(.bold).foregroundColor(Color.white).padding()
+                        
+                    }.frame(width: 100, height: 50).cornerRadius(15)
+                }.background(RoundedRectangle(cornerRadius: 15))
+            }
+            
+            Spacer()
+        }
+        
+        //        let numsString = incorrectArray.map { String($0) }.joined(separator: ", ")
     }
 }
 

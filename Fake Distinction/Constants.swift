@@ -20,6 +20,7 @@ struct K {
         static let exitLeading = UIColor(red: 0.009, green: 0.072, blue: 0.315, alpha: 1.0)
         static let exitTrailing = UIColor(red: 0.178, green: 0.352, blue: 0.961, alpha:1.0)
         static let blueGradient = LinearGradient(gradient: Gradient(colors: [Color(K.Colors.exitLeading), Color(K.Colors.exitTrailing)]), startPoint: .leading, endPoint: .trailing)
+        static let pinkGradient = LinearGradient(gradient: Gradient(colors: [Color(K.Colors.learnBtnLeading), Color(K.Colors.learnBtnTrailing)]), startPoint: .leading, endPoint: .trailing)
     }
     
     struct Size {

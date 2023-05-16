@@ -19,7 +19,7 @@ struct ContentView: View {
     @ObservedObject var viewModel: ViewModel
     @State private var isLoading: Bool = true // ここをtrueにする
     @State private var isCorrect: Bool = false
-    @State private var isIncorrect: Bool = false
+    @State private var isIncorrect: Bool = true
     @State private var isShowingView: Bool = false
     @State var idiom:String = ""
     @State var idiomExp:String = ""
@@ -31,6 +31,7 @@ struct ContentView: View {
         generateIdioms()
     }
     var body: some View {
+        var cardColor = self.colorScheme == .dark ? K.Colors.cardDark : K.Colors.cardLight
         if isLoading { // スプラッシュ画面
             ZStack {
                 Image("launch_screen").aspectRatio(contentMode: .fit).ignoresSafeArea()
@@ -43,29 +44,26 @@ struct ContentView: View {
                 }
             }
         } else {
-            var cardColor = colorScheme == .dark ? K.Colors.cardDark : K.Colors.cardLight
+            
             
             Spacer()
             
             VStack {
                 Group{
-                    // イディオムカード
-                    VStack(alignment: .center, spacing: 4) {
-                        Text(idiom).font(.system(size: K.Size.idiomTextSize, weight: .black, design: .default))
-                            .padding()
-                        Text(synonym).font(.system(size: K.Size.synonymTextSize, weight: .bold, design: .default))
-                            .padding(.horizontal, 70)
-                    }.background(RoundedRectangle(cornerRadius: 50)
-                        .fill(Color(cardColor))
-                        .frame(width: 380, height: 300)
-                        .shadow(color:.gray, radius: 2, x:0, y:5)
-                        .padding(.horizontal, 50)
-                    )
                     
+                    if isCorrect {
+                        idiomCard()
+                            .transition(.slide)
+                    } else {
+                        idiomCard()
+                            .transition(.scale)
+                    }
+                    
+                    //                    isIncorrect ? idiomCard().transition(.slide) : idiomCard().transition(.scale(scale: .greatestFiniteMagnitude))
                     // イディオムの例文
                     Text(idiomExp).font(.system(size: K.Size.expTextSize, weight: .medium, design: .default)).frame(width: 380, height: 300)
                 }
-                //                    .overlay()
+                
                 
                 Group {
                     VStack(spacing: 10) {
@@ -86,8 +84,11 @@ struct ContentView: View {
                                     )
                                     .frame(width: 100, height: 100)
                             }
-                            Button(action:{
-                                isCorrect.toggle()
+                            Button(action: {
+                                withAnimation {
+                                    isCorrect.toggle()
+                                }
+                                
                                 viewModel.memorizedArray.append(generateIdioms())
                             }){
                                 Image("check-mark")
@@ -141,6 +142,29 @@ struct ContentView: View {
         }
     }
     
+    // idiom card itself
+    func idiomCard() -> AnyView {
+        var cardColor = self.colorScheme == .dark ? K.Colors.cardDark : K.Colors.cardLight
+        return AnyView(
+            VStack(alignment: .center, spacing: 4) {
+                
+                // main idiom
+                Text(idiom).font(.system(size: K.Size.idiomTextSize, weight: .black, design: .default))
+                    .padding()
+                
+                // synonim
+                Text(synonym).font(.system(size: K.Size.synonymTextSize, weight: .bold, design: .default))
+                    .padding(.horizontal, 70)
+                
+            }.background(RoundedRectangle(cornerRadius: 50)
+                .fill(Color(cardColor))
+                .frame(width: 380, height: 300)
+                .shadow(color:.gray, radius: 2, x:0, y:5)
+                .padding(.horizontal, 50)
+            )
+        )
+    }
+    
     // ランダムモード
     func randomMode() -> (id: Int, ex: String, expression: String, synonym: String) {
         let n = Int.random(in: 0...1072)
@@ -174,6 +198,7 @@ struct ContentView: View {
         return nil
     }
 }
+
 
 //struct ContentView_Previews: PreviewProvider {
 //    static var previews: some View {
