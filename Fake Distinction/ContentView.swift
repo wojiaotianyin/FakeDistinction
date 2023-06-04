@@ -15,6 +15,7 @@ extension AnyTransition {
     }
 }
 
+// TODO: Viewを使いまわせるようにすること
 struct ContentView: View {
     @ObservedObject var viewModel: ViewModel
     @State private var isLoading: Bool = true // ここをtrueにする

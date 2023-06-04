@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ResultView: View {
+    @Environment(\.presentationMode) var presentationMode
     @ObservedObject var viewModel: ViewModel
     private var incorrectArray: [Int]
     private var correctArrray: [Int]
@@ -30,6 +31,8 @@ struct ResultView: View {
                 Button(action: {
                     //                    isCorrect.toggle()
                     //                    viewModel.memorizedArray.append(generateIdioms())
+                    print("show unmemorized idioms")
+                    self.presentationMode.wrappedValue.dismiss()
                 }){
                     ZStack{
                         K.Colors.pinkGradient
@@ -46,6 +49,8 @@ struct ResultView: View {
                 Button(action: {
                     //                    isCorrect.toggle()
                     //                    viewModel.memorizedArray.append(generateIdioms())
+                    print("show memorized idioms")
+                    self.presentationMode.wrappedValue.dismiss()
                 }){
                     ZStack{
                         K.Colors.pinkGradient
