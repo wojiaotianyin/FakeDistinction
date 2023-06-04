@@ -25,6 +25,7 @@ struct ContentView: View {
     @State var idiom:String = ""
     @State var idiomExp:String = ""
     @State var synonym:String = ""
+    @State var paging: Int = 0
     @Environment(\.colorScheme) var colorScheme
     //    @State var memorizedIdioms: [Int]
     init(){
@@ -45,80 +46,61 @@ struct ContentView: View {
                 }
             }
         } else {
-            
-            
-            Spacer()
-            
-            VStack {
-                Group{
-                    
-                    if isCorrect {
-                        idiomCard()
-                            .transition(.slide)
-                    } else {
-                        idiomCard()
-                            .transition(.scale)
+            VStack(spacing: 0) {
+                
+                idiomCard()
+                    .overlay(
+                        // イディオムの例文
+                        Text(idiomExp)
+                            .font(.system(size: K.Size.expTextSize, weight: .medium, design: .default))
+                            .frame(width: 380, height: 300)
+                            .offset(y: 200)
+                    )
+                
+                Spacer()
+                
+                // チェック・バツボタン
+                HStack(spacing:80){
+                    Button(action:{
+                        paging += 1
+                        isIncorrect.toggle()
+                        viewModel.incorrectArray.append(generateIdioms())
+                    }) {
+                        Image("cross")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .padding(.all)
+                            .background(RoundedRectangle(cornerRadius: 25)
+                                .fill(Color(K.Colors.crossBtnColor))
+                                .frame(width: 100, height: 100)
+                                .shadow(color:.gray, radius: 2, x:0, y:5)
+                            )
+                            .frame(width: 100, height: 100)
                     }
-                    
-                    //                    isIncorrect ? idiomCard().transition(.slide) : idiomCard().transition(.scale(scale: .greatestFiniteMagnitude))
-                    // イディオムの例文
-                    Text(idiomExp).font(.system(size: K.Size.expTextSize, weight: .medium, design: .default)).frame(width: 380, height: 300)
-                }
-                
-                
-                Group {
-                    VStack(spacing: 10) {
-                        // チェック・バツボタン
-                        HStack(spacing:80){
-                            Button(action:{
-                                isIncorrect.toggle()
-                                viewModel.incorrectArray.append(generateIdioms())
-                            }) {
-                                Image("cross")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .padding(.all)
-                                    .background(RoundedRectangle(cornerRadius: 25)
-                                        .fill(Color(K.Colors.crossBtnColor))
-                                        .frame(width: 100, height: 100)
-                                        .shadow(color:.gray, radius: 2, x:0, y:5)
-                                    )
-                                    .frame(width: 100, height: 100)
-                            }
-                            Button(action: {
-                                withAnimation {
-                                    isCorrect.toggle()
-                                }
-                                
-                                viewModel.memorizedArray.append(generateIdioms())
-                            }){
-                                Image("check-mark")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .padding(.all)
-                                    .background(RoundedRectangle(cornerRadius: 25)
-                                        .fill(Color(K.Colors.checkBtnColor))
-                                        .frame(width: 100, height: 100)
-                                        .shadow(color:.gray, radius: 2, x:0, y:5)
-                                    )
-                                    .frame(width: 100, height: 100)
-                                
-                            }
+                    Button(action: {
+                        withAnimation {
+                            isCorrect.toggle()
                         }
+                        paging += 1
+                        viewModel.memorizedArray.append(generateIdioms())
+                    }){
+                        Image("check-mark")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .padding(.all)
+                            .background(RoundedRectangle(cornerRadius: 25)
+                                .fill(Color(K.Colors.checkBtnColor))
+                                .frame(width: 100, height: 100)
+                                .shadow(color:.gray, radius: 2, x:0, y:5)
+                            )
+                            .frame(width: 100, height: 100)
                         
-                        Button(action:{
-                            isShowingView.toggle()
-                        }){
-                            ZStack{
-                                K.Colors.blueGradient
-                                Text("Result").fontWeight(.bold).foregroundColor(Color.white).padding()
-                                
-                            }.frame(width: 100, height: 50).cornerRadius(15)
-                        }.background(RoundedRectangle(cornerRadius: 15)).offset(x: 150, y: 0).sheet(isPresented: $isShowingView) {
-                            ResultView(viewModel: viewModel)
-                        }
                     }
                 }
+                .frame(alignment: .bottom)
+                
+                Text("\(paging) / 10")
+                    .padding(.vertical, 20)
             }
         }
     }
@@ -147,22 +129,22 @@ struct ContentView: View {
     func idiomCard() -> AnyView {
         var cardColor = self.colorScheme == .dark ? K.Colors.cardDark : K.Colors.cardLight
         return AnyView(
-            VStack(alignment: .center, spacing: 4) {
-                
-                // main idiom
-                Text(idiom).font(.system(size: K.Size.idiomTextSize, weight: .black, design: .default))
-                    .padding()
-                
-                // synonim
-                Text(synonym).font(.system(size: K.Size.synonymTextSize, weight: .bold, design: .default))
-                    .padding(.horizontal, 70)
-                
-            }.background(RoundedRectangle(cornerRadius: 50)
-                .fill(Color(cardColor))
+            Rectangle()
+                .cornerRadius(50)
+                .foregroundColor(Color(cardColor))
                 .frame(width: 380, height: 300)
-                .shadow(color:.gray, radius: 2, x:0, y:5)
-                .padding(.horizontal, 50)
-            )
+                .shadow(color: Color.gray, radius: 2, x:0, y:5)
+                .overlay(
+                    VStack(alignment: .center, spacing: 4) {
+
+                        // main idiom
+                        Text(idiom).font(.system(size: K.Size.idiomTextSize, weight: .black, design: .default))
+                            .padding(.all)
+                        // synonim
+                        Text(synonym).font(.system(size: K.Size.synonymTextSize, weight: .bold, design: .default))
+
+                    }
+                )
         )
     }
     
@@ -183,10 +165,6 @@ struct ContentView: View {
         idiomExp = idiomTuple.ex
         synonym = idiomTuple.synonym
         return idiomId
-    }
-    
-    func newIdioms(){ // 今まで出てこなかった単語を配列に格納する。
-        
     }
     
     // ノーマルモード（順番にイディオムを返す。アプリの状態が消えれば最初から)
